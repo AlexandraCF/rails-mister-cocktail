@@ -28,5 +28,10 @@ end
   end
 end
     #Ingredient.create(name: "ice")
+    Cocktail.create(name: "Mojito")
+    Cocktail.create(name: "Bloody Mary")
+    Cocktail.create(name: "Sex on the Beach")
+    Cocktail.create(name: "Margarita")
+    Cocktail.create(name: "Pina Colada")
 
 puts "Finished!"
