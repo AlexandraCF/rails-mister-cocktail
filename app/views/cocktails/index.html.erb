@@ -1,11 +1,19 @@
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1468072114808-903e572b8ead?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=966&q=80);">
+  <div class="container">
+    <h1>Cocktails on the Rocks</h1>
+  </div>
+</div>
+
 <div class="container">
-<h1>Cocktails 🍹 </h1>
-<ul>
-<% @cocktails.each do |cocktail| %>
-<li><%= link_to cocktail.name, cocktail_path(cocktail)%></li>
-<% end %>
-</ul>
+	<div class="cards">
 
+		<% @cocktails.each do |cocktail| %>
+			<%= link_to cocktail_path(cocktail) do %>
+				<div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1510626176961-4b57d4fbad03?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1868&q=80)">
+					<%=cocktail.name %>
+				</div>
+			<% end %>
+		<% end %>
+	</div>
 <%= link_to "Create your Cocktail", new_cocktail_path  %>
-
 </div>
