@@ -15,6 +15,7 @@ list_drinks = JSON.parse(drinks_serialized)
 my_drinks = list_drinks['drinks']
 
 puts "Cleaning database..."
+Dose.destroy_all
 Ingredient.destroy_all
 
 ingredients = []
@@ -33,5 +34,7 @@ end
     Cocktail.create(name: "Sex on the Beach")
     Cocktail.create(name: "Margarita")
     Cocktail.create(name: "Pina Colada")
+    Cocktail.create(name: "Spritz")
+    #cocktail.photo.attach(io: file, filename: 'spritz.jpg', content_type:'image/jpg')
 
 puts "Finished!"

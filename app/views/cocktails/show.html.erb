@@ -1,5 +1,8 @@
 <h2><%= @cocktail.name %></h2>
 <ul>
+<% if @cocktail.photo.attached? %>
+<%= cl_image_tag @cocktail.photo.key, width:100 , height:150, crop: :fill %>
+<% end %>
 <% @cocktail.doses.each do |dose| %>
 <li><%= "#{dose.description} -   #{dose.ingredient.name}"%>
 <%= link_to  dose_path(dose), method: :delete, data: {confirm: "Are you sure?"} do %>
