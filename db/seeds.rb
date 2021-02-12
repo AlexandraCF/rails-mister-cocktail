@@ -29,12 +29,11 @@ end
   end
 end
     #Ingredient.create(name: "ice")
-    Cocktail.create(name: "Mojito")
+    Cocktail.create(name: "Mojito", photo: "https://res.cloudinary.com/drobn3m9u/image/upload/v1613145030/vzhredqo2wzeacloqv55.jpg")
     Cocktail.create(name: "Bloody Mary")
     Cocktail.create(name: "Sex on the Beach")
     Cocktail.create(name: "Margarita")
     Cocktail.create(name: "Pina Colada")
     Cocktail.create(name: "Spritz")
-    #cocktail.photo.attach(io: file, filename: 'spritz.jpg', content_type:'image/jpg')
 
 puts "Finished!"
